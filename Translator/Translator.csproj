@@ -68,6 +68,9 @@
     <Compile Include="AddWordsForm.xaml.cs">
       <DependentUpon>AddWordsForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShowAllWordsForm.xaml.cs">
+      <DependentUpon>ShowAllWordsForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Word.cs" />
     <Compile Include="WordContext.cs" />
     <Page Include="MainWindow.xaml">
@@ -83,6 +86,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="AddWordsForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowAllWordsForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

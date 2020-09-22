@@ -40,13 +40,15 @@ namespace Translator
             using (var context = new WordContext())
             {
                 Word lastWord = (from element in context.Words select element).ToList().Last();
-                mainWord.Content = lastWord.MainWord;
+                mainWord.Content = lastWord.FirstForm;
             }
         }
 
         private void ShowAllWords(object sender, RoutedEventArgs e)
         {
-
+            ShowAllWordsForm form = new ShowAllWordsForm();
+            form.Owner = this;
+            form.Show();
         }
     }
 }

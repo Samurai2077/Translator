@@ -10,9 +10,9 @@ namespace Translator
     {
         public int WordId { get; set; }
 
-        public string MainWord { get; set; }
+        public string FirstForm { get; set; }
         public string Translate { get; set; }
-        public string SecondWord { get; set; }
-        public string ThirdWord { get; set; }
+        public string SecondForm { get; set; }
+        public string ThirdForm { get; set; }
     }
 }

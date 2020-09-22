@@ -1,0 +1,22 @@
+﻿<Window x:Class="Translator.ShowAllWordsForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Translator"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Все слова" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="wordsList" FontSize="20">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding FirstForm}">Первая форма</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Translate}">Перевод</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding SecondForm}">Вторая форма</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding ThirdForm}">Третья форма</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

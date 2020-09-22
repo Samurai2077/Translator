@@ -43,10 +43,16 @@ namespace Translator
                 else
                     word.WordId = 1;
 
-                word.MainWord = mainWord.Text;
-                word.Translate = translate.Text;
-                word.SecondWord = secondForm.Text;
-                word.ThirdWord = thirdForm.Text;
+                word.FirstForm = mainWord.Text.ToLower();
+                word.Translate = translate.Text.ToLower();
+                word.SecondForm = secondForm.Text.ToLower();
+                word.ThirdForm = thirdForm.Text.ToLower();
+
+                if(context.Words.Any(element => element.FirstForm == word.FirstForm))
+                {
+                    MessageBox.Show($"Слово {word.FirstForm} уже числится в словаре");
+                    return;
+                }
 
                 if (CheckUserInput())
                 {
