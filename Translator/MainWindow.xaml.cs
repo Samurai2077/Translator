@@ -30,6 +30,10 @@ namespace Translator
 
         private void Initialize()
         {
+            using (var context = new WordContext())
+            {
+
+            }
             ShowNextWord();
         }
 
@@ -82,9 +86,9 @@ namespace Translator
             checkButton.Visibility = Visibility.Hidden;
             nextButton.Visibility = Visibility.Visible;
 
-            translateTextBox.Background = translateTextBox.Text == currentWord.Translate ? Brushes.Green : Brushes.Red;
-            secondFormTextBox.Background = secondFormTextBox.Text == currentWord.SecondForm ? Brushes.Green : Brushes.Red;
-            thirdFormTextBox.Background = thirdFormTextBox.Text == currentWord.ThirdForm ? Brushes.Green : Brushes.Red;
+            translateTextBox.Background = translateTextBox.Text.ToLower() == currentWord.Translate ? Brushes.Green : Brushes.Red;
+            secondFormTextBox.Background = secondFormTextBox.Text.ToLower() == currentWord.SecondForm ? Brushes.Green : Brushes.Red;
+            thirdFormTextBox.Background = thirdFormTextBox.Text.ToLower() == currentWord.ThirdForm ? Brushes.Green : Brushes.Red;
 
             rightTranslateLabel.Content = currentWord.Translate;
             rightSecondFormLabel.Content = currentWord.SecondForm;

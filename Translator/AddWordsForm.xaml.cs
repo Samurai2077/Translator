@@ -88,5 +88,20 @@ namespace Translator
             for (int i = 0; i < userInputField.Count; i++)
                 userInputField[i].Background = Brushes.White;
         }
+
+        private void mainWord_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            using (var context = new WordContext())
+            {
+                if(context.Words.Any(word => word.FirstForm == ((TextBox)sender).Text))
+                {
+                    mainWord.Background = Brushes.Red;
+                }
+                else
+                {
+                    mainWord.Background = Brushes.White;
+                }
+            }
+        }
     }
 }

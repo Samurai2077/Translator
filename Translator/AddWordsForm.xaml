@@ -24,7 +24,7 @@
         <Label Grid.Row="2" FontSize="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Right">Third Form:</Label>
         <Label Grid.Row="3" FontSize="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Right">Translate:</Label>
 
-        <TextBox x:Name="mainWord" Grid.Row="0" Grid.Column="1" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+        <TextBox TextChanged="mainWord_TextChanged" x:Name="mainWord" Grid.Row="0" Grid.Column="1" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
         <TextBox x:Name="secondForm" Grid.Row="1" Grid.Column="1" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
         <TextBox x:Name="thirdForm" Grid.Row="2" Grid.Column="1" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
         <TextBox x:Name="translate" Grid.Row="3" Grid.Column="1" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
