@@ -27,19 +27,23 @@
                     <RowDefinition/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 
                 <Label Grid.Column="0" HorizontalContentAlignment="Center" FontSize="20">Перевод</Label>
                 <Label Grid.Column="1" HorizontalContentAlignment="Center" FontSize="20">Вторая форма</Label>
                 <Label Grid.Column="2" HorizontalContentAlignment="Center" FontSize="20">Третья форма</Label>
 
-                <TextBox Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></TextBox>
-                <TextBox Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></TextBox>
-                <TextBox Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></TextBox>
+                <TextBox x:Name="translateTextBox" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></TextBox>
+                <TextBox x:Name="secondFormTextBox" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></TextBox>
+                <TextBox x:Name="thirdFormTextBox" Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></TextBox>
 
-                <Label Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center" FontSize="20"></Label>
-                <Label Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center" FontSize="20"></Label>
-                <Label Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center" FontSize="20">а</Label>
+                <Label x:Name="rightTranslateLabel" Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center" FontSize="20"></Label>
+                <Label x:Name="rightSecondFormLabel" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center" FontSize="20"></Label>
+                <Label x:Name="rightThirdFormLabel" Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center" FontSize="20"></Label>
+
+                <Button x:Name="checkButton" Grid.Row="3" Visibility="Visible"  Grid.Column="1" Height="50" Margin="0, 20, 0, 0" FontSize="20" Click="CheckAnswer">Проверить</Button>
+                <Button x:Name="nextButton" Grid.Row="3" Visibility="Hidden"  Grid.Column="1" Height="50" Margin="0, 20, 0, 0" FontSize="20" Click="ShowNextWord">Далее</Button>
             </Grid>
         </StackPanel>
     </Grid>
